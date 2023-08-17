@@ -1,8 +1,8 @@
 ﻿using Shared.Models;
 
-namespace Database.Services;
+namespace Database.Controllers;
 
-internal interface IMenuService
+internal interface IMenuController
 {
     List<MenuEntry> GetParentlessMenuEntries();
     List<MenuEntry> GetChildren(int id);

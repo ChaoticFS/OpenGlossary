@@ -1,15 +1,16 @@
 ﻿using Database.Context;
+using Database.Repositories;
 using Shared.Models;
 
-namespace Database.Services;
+namespace Database.Controllers;
 
-public class EntryService : IEntryService
+public class EntryController : IEntryController
 {
-    public EntryContext db { get; }
+    private readonly EntryRepository _repo;
 
-    public EntryService(EntryContext db)
+    public EntryController(EntryRepository repo)
     {
-        this.db = db;
+        _repo = repo;
     }
 
     public Entry GetEntry(int id)

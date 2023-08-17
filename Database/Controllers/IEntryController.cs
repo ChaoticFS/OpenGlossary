@@ -1,8 +1,8 @@
 ﻿using Shared.Models;
 
-namespace Database.Services;
+namespace Database.Controllers;
 
-internal interface IEntryService
+internal interface IEntryController
 {
     Entry GetEntry(int id);
     Entry PostEntry(Entry entry);

@@ -1,15 +1,16 @@
 ﻿using Database.Context;
+using Database.Repositories;
 using Shared.Models;
 
-namespace Database.Services;
+namespace Database.Controllers;
 
-public class MenuService : IMenuService
+public class MenuController : IMenuController
 {
-    private EntryContext db { get; }
+    private readonly MenuRepository _repo;
 
-    public MenuService(EntryContext db)
+    public MenuController(MenuRepository repo)
     {
-        this.db = db;
+        _repo = repo;
     }
 
     public List<MenuEntry> GetParentlessMenuEntries()
