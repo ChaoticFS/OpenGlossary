@@ -1,8 +1,15 @@
-﻿using Database.Context;
-using Database.Services;
+﻿using Client.Services;
+using Database.Context;
+using Database.Controllers;
+using Database.Repositories;
 
 EntryContext entryContext = new EntryContext();
 
-EntryService entryService = new EntryService(entryContext);
-MenuService menuService = new MenuService(entryContext);
+EntryRepository entryRepository = new EntryRepository(entryContext);
+MenuRepository menuRepository = new MenuRepository(entryContext);
 
+EntryController entryController = new EntryController(entryRepository);
+MenuController menuController = new MenuController(menuRepository);
+
+EntryService entryService = new EntryService(entryController);
+MenuService menuService = new MenuService(menuController);
