@@ -2,7 +2,7 @@
 
 public class MenuEntry
 {
-    MenuEntry(int id, string name, List<MenuEntry>? entries)
+    MenuEntry(int id, string name, List<MenuEntry>? entries = null)
     {
         Id = id;
         Name = name;
