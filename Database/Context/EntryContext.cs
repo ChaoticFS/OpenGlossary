@@ -11,7 +11,7 @@ public class EntryContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            string connectionString = "database.db";
+            string connectionString = "Data Source=bin/database.db";
 
             optionsBuilder.UseSqlite(connectionString);
         }
