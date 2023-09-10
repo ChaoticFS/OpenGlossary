@@ -15,15 +15,15 @@ public class MenuController : IMenuController
 
     public List<MenuEntry> GetParentlessMenuEntries()
     {
-        throw new NotImplementedException();
+        return _repo.GetRootNodes();
     }
 
     public List<MenuEntry> GetChildren(int id)
     {
-        throw new NotImplementedException();
+        return _repo.GetChildren(id);
     }
 
-    public List<MenuEntry> GetMenuEntries(int id)
+    public List<MenuEntry> GetTree(int id)
     {
         throw new NotImplementedException();
     }

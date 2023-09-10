@@ -15,21 +15,21 @@ public class EntryController : IEntryController
 
     public Entry GetEntry(int id)
     {
-        throw new NotImplementedException();
+        return _repo.GetEntry(id);
     }
 
-    public Entry PostEntry(Entry entry)
+    public void PostEntry(Entry entry)
     {
-        throw new NotImplementedException();
+        _repo.PostEntry(entry);
     }
 
-    public bool DeleteEntry(int id)
+    public void DeleteEntry(int id)
     {
-        throw new NotImplementedException();
+        _repo.DeleteEntry(id);
     }
 
-    public Entry PutEntry(Entry entry)
+    public void PutEntry(Entry entry)
     {
-        throw new NotImplementedException();
+        _repo.UpdateEntry(entry);
     }
 }
