@@ -2,16 +2,8 @@
 
 public class MenuEntry
 {
-    MenuEntry(int id, string name, List<MenuEntry>? entries = null)
-    {
-        Id = id;
-        Name = name;
-        Entries = entries;
-        IsOpened = false;
-    }
-
     public int Id { get; set; }
-    public string Name { get; set; }
+    public string? Title { get; set; }
     public List<MenuEntry>? Entries { get; set; }
     public bool IsOpened { get; set; }
 }
