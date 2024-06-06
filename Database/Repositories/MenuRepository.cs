@@ -1,4 +1,5 @@
-﻿using Database.Context;
+﻿using Database.Repositories.Context;
+using Database.Repositories.Interfaces;
 using Shared.Models;
 
 namespace Database.Repositories;

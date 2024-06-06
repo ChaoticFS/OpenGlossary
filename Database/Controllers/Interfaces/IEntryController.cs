@@ -1,6 +1,6 @@
 ﻿using Shared.Models;
 
-namespace Database.Controllers;
+namespace Database.Controllers.Interfaces;
 
 internal interface IEntryController
 {

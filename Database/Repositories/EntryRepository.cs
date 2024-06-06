@@ -1,5 +1,5 @@
-﻿using Database.Context;
-using Microsoft.EntityFrameworkCore;
+﻿using Database.Repositories.Context;
+using Database.Repositories.Interfaces;
 using Shared.Models;
 
 namespace Database.Repositories;

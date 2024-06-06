@@ -1,15 +1,21 @@
-﻿using Client.Services;
-using Database.Context;
-using Database.Controllers;
-using Database.Repositories;
+﻿using Avalonia;
+using System;
 
-EntryContext entryContext = new EntryContext();
+namespace Client;
 
-EntryRepository entryRepository = new EntryRepository(entryContext);
-MenuRepository menuRepository = new MenuRepository(entryContext);
+class Program
+{
+    // Initialization code. Don't use any Avalonia, third-party APIs or any
+    // SynchronizationContext-reliant code before AppMain is called: things aren't initialized
+    // yet and stuff might break.
+    [STAThread]
+    public static void Main(string[] args) => BuildAvaloniaApp()
+        .StartWithClassicDesktopLifetime(args);
 
-EntryController entryController = new EntryController(entryRepository);
-MenuController menuController = new MenuController(menuRepository);
-
-EntryService entryService = new EntryService(entryController);
-MenuService menuService = new MenuService(menuController);
+    // Avalonia configuration, don't remove; also used by visual designer.
+    public static AppBuilder BuildAvaloniaApp()
+        => AppBuilder.Configure<App>()
+            .UsePlatformDetect()
+            .WithInterFont()
+            .LogToTrace();
+}

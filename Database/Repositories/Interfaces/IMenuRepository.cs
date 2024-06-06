@@ -1,6 +1,6 @@
 ﻿using Shared.Models;
 
-namespace Database.Repositories;
+namespace Database.Repositories.Interfaces;
 public interface IMenuRepository
 {
     List<MenuEntry> GetRootNodes();
